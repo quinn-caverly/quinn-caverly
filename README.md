@@ -1,7 +1,10 @@
 # Quinn Caverly
 > Software Engineer with DevOps work experience
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/quinn-caverly)
+<a href="https://linkedin.com/in/quinn-caverly" target="_blank">
+  <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
+</a>
+
 ## 🎯 Summary
 - 💼 Experience as DevOps Intern working primarily on Github Actions w/ Bash + Python
 - 🎓 Penn State Computer Science Major w/ 3.9 GPA

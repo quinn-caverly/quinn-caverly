@@ -18,25 +18,20 @@ const projects: Project[] = [
     image: "/projects/prospecting-engine.png",
   },
   {
-    title: "Sample project two",
+    title: "knavishproductions-app",
     blurb:
-      "Another placeholder. The image on the left will be a screenshot, video still, or rendered frame.",
-    href: "https://github.com/quinn-caverly",
-    meta: "Python · Vertex AI · Terraform",
+      "Production pipeline app for the KnavishMantis channel: brief intake from prospecting-engine, script editor, asset library, paid-editor handoff, post-publish teardowns. Live at knavishproductions.com.",
+    href: "https://github.com/knavishmantis/knavishproductions-app-public",
+    meta: "Next.js · Postgres · Cloud Run · Firebase · Terraform",
+    image: "/projects/knavishproductions-app.png",
   },
   {
-    title: "Sample project three",
+    title: "formula-viz",
     blurb:
-      "Banners stack vertically; on mobile the image moves above the text.",
-    href: "https://github.com/quinn-caverly",
-    meta: "Rust · GPU CI",
-  },
-  {
-    title: "Sample project four",
-    blurb:
-      "Roughly four to six banners is the recruiter-attention sweet spot.",
-    href: "https://github.com/quinn-caverly",
-    meta: "Minecraft mod · Forge",
+      "F1 visualization platform: FastF1 telemetry → physics-based 3D animation → GPU-accelerated Blender on GitHub Actions → multi-format YouTube auto-publish. Live at formula-viz.com.",
+    href: "https://github.com/formula-viz",
+    meta: "Python · Blender · GitHub Actions GPU · Next.js",
+    image: "/projects/formula-viz.webp",
   },
 ];
 

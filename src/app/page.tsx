@@ -60,6 +60,12 @@ export default function Home() {
           >
             quinncaverly@gmail.com <span aria-hidden="true">→</span>
           </a>
+          <a
+            href="https://youtube.com/@knavishmantis"
+            className="text-fg hover:text-accent"
+          >
+            youtube.com/@knavishmantis <span aria-hidden="true">→</span>
+          </a>
         </nav>
       </header>
 

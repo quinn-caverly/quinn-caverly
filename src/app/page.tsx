@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Project = {
   title: string;
   blurb: string;
@@ -8,11 +10,12 @@ type Project = {
 
 const projects: Project[] = [
   {
-    title: "Sample project one",
+    title: "prospecting-engine",
     blurb:
-      "Placeholder for a real project banner — short description that fits in two lines and tells a recruiter what the thing is.",
-    href: "https://github.com/quinn-caverly",
-    meta: "Next.js · Postgres · GCP",
+      "Multi-agent research pipeline mining 12 sources for content briefs for the KnavishMantis YouTube channel. Surfaced “Endermen secretly use a diamond axe” → 200K+ views.",
+    href: "https://github.com/quinn-caverly/prospecting-engine-public",
+    meta: "Python · Vertex AI ADK · Gemini · Cloud Run · Terraform",
+    image: "/projects/prospecting-engine.png",
   },
   {
     title: "Sample project two",
@@ -39,26 +42,26 @@ const projects: Project[] = [
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-3xl px-6 py-16 sm:py-24">
-      <header className="mb-14">
+    <main className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
+      <header className="mb-12">
         <h1 className="text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
           Quinn Caverly
         </h1>
-        <p className="mt-2 text-fg-muted">
+        <p className="mt-3 text-lg text-fg-muted">
           Platform / Infra / Cloud Engineer · Baltimore, MD
         </p>
-        <nav className="mt-4 flex items-center gap-5 text-sm">
+        <nav className="mt-5 flex items-center gap-5 text-base">
           <a
             href="https://github.com/quinn-caverly"
-            className="text-fg-muted hover:text-accent-strong"
+            className="text-fg hover:text-accent"
           >
-            GitHub
+            GitHub <span aria-hidden="true">→</span>
           </a>
           <a
             href="mailto:quinncaverly@gmail.com"
-            className="text-fg-muted hover:text-accent-strong"
+            className="text-fg hover:text-accent"
           >
-            quinncaverly@gmail.com
+            Email <span aria-hidden="true">→</span>
           </a>
         </nav>
       </header>
@@ -76,14 +79,16 @@ function ProjectBanner({ project }: { project: Project }) {
   return (
     <a
       href={project.href}
-      className="group flex flex-col gap-4 rounded-lg border border-border bg-elevated p-4 hover:border-border-strong sm:flex-row sm:gap-5"
+      className="group flex flex-col gap-4 rounded-lg border border-border bg-surface p-4 hover:border-border-strong sm:flex-row sm:gap-5"
     >
-      <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-md bg-surface-2 sm:w-56">
+      <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-md border border-border bg-bg sm:w-56">
         {project.image ? (
-          <img
+          <Image
             src={project.image}
             alt=""
-            className="h-full w-full object-cover"
+            fill
+            sizes="(min-width: 640px) 224px, 100vw"
+            className="object-cover"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-xs uppercase tracking-wider text-fg-subtle">
@@ -92,16 +97,14 @@ function ProjectBanner({ project }: { project: Project }) {
         )}
       </div>
       <div className="flex min-w-0 flex-col justify-center">
-        <h2 className="text-base font-medium text-fg group-hover:text-accent-strong">
+        <h2 className="text-base font-semibold tracking-tight text-fg group-hover:text-accent">
           {project.title}
         </h2>
-        <p className="mt-1 text-sm leading-relaxed text-fg-muted">
+        <p className="mt-1.5 text-sm leading-relaxed text-fg-muted">
           {project.blurb}
         </p>
         {project.meta && (
-          <p className="mt-2 font-mono text-xs text-fg-subtle">
-            {project.meta}
-          </p>
+          <p className="mt-2 text-xs text-fg-subtle">{project.meta}</p>
         )}
       </div>
     </a>

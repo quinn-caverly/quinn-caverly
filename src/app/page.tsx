@@ -1,4 +1,4 @@
-import Image from "next/image";
+const BASE_PATH = "/quinn-caverly";
 
 type Project = {
   title: string;
@@ -37,29 +37,37 @@ const projects: Project[] = [
 
 export default function Home() {
   return (
-    <main className="mx-auto max-w-2xl px-6 py-16 sm:py-24">
-      <header className="mb-12">
-        <h1 className="text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
+    <main className="mx-auto max-w-2xl px-6 py-16 sm:py-20">
+      <header className="mb-10">
+        <h1 className="text-4xl font-semibold tracking-tight text-fg sm:text-5xl">
           Quinn Caverly
         </h1>
-        <p className="mt-3 text-lg text-fg-muted">
-          Platform / Infra / Cloud Engineer · Baltimore, MD
+        <p className="mt-5 text-base leading-relaxed text-fg-muted sm:text-lg">
+          Platform/infra-focused software engineer building production AI
+          pipelines, full-stack apps, and rendering platforms. Penn State CS
+          '25 (3.87, math minor); AWS DevOps Pro, CKAD, Terraform Associate.
+          Based in Baltimore, open to relocation.
         </p>
-        <nav className="mt-5 flex items-center gap-5 text-base">
+        <nav className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-base">
           <a
             href="https://github.com/quinn-caverly"
             className="text-fg hover:text-accent"
           >
             GitHub <span aria-hidden="true">→</span>
           </a>
+          <span aria-hidden="true" className="text-fg-subtle">
+            ·
+          </span>
           <a
             href="mailto:quinncaverly@gmail.com"
             className="text-fg hover:text-accent"
           >
-            Email <span aria-hidden="true">→</span>
+            quinncaverly@gmail.com <span aria-hidden="true">→</span>
           </a>
         </nav>
       </header>
+
+      <div className="mb-6 h-px w-full bg-border" />
 
       <section className="flex flex-col gap-4">
         {projects.map((p) => (
@@ -78,12 +86,11 @@ function ProjectBanner({ project }: { project: Project }) {
     >
       <div className="relative aspect-video w-full shrink-0 overflow-hidden rounded-md border border-border bg-bg sm:w-56">
         {project.image ? (
-          <Image
-            src={project.image}
+          // eslint-disable-next-line @next/next/no-img-element
+          <img
+            src={`${BASE_PATH}${project.image}`}
             alt=""
-            fill
-            sizes="(min-width: 640px) 224px, 100vw"
-            className="object-cover"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         ) : (
           <div className="flex h-full w-full items-center justify-center text-xs uppercase tracking-wider text-fg-subtle">

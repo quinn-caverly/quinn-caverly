@@ -13,7 +13,7 @@ const projects: Project[] = [
     title: "prospecting-engine",
     blurb:
       "Multi-agent research pipeline mining 12 sources for content briefs for the KnavishMantis YouTube channel. Surfaced “Endermen secretly use a diamond axe” → 200K+ views.",
-    href: "https://github.com/quinn-caverly/prospecting-engine-public",
+    href: "https://github.com/knavishmantis/prospecting-engine-public",
     meta: "Python · Vertex AI ADK · Gemini · Cloud Run · Terraform",
     image: "/projects/prospecting-engine.png",
   },

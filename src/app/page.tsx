@@ -47,16 +47,13 @@ export default function Home() {
           math minor); AWS DevOps Pro, CKAD, Terraform Associate. Based in
           Baltimore, open to relocation.
         </p>
-        <nav className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-base">
+        <nav className="mt-5 flex flex-col items-start gap-y-1 text-base">
           <a
             href="https://github.com/quinn-caverly"
             className="text-fg hover:text-accent"
           >
-            GitHub <span aria-hidden="true">→</span>
+            github.com/quinn-caverly <span aria-hidden="true">→</span>
           </a>
-          <span aria-hidden="true" className="text-fg-subtle">
-            ·
-          </span>
           <a
             href="mailto:quinncaverly@gmail.com"
             className="text-fg hover:text-accent"

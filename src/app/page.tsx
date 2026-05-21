@@ -43,10 +43,9 @@ export default function Home() {
           Quinn Caverly
         </h1>
         <p className="mt-5 text-base leading-relaxed text-fg-muted sm:text-lg">
-          Platform/infra-focused software engineer building production AI
-          pipelines, full-stack apps, and rendering platforms. Penn State CS
-          '25 (3.87, math minor); AWS DevOps Pro, CKAD, Terraform Associate.
-          Based in Baltimore, open to relocation.
+          Platform/infra-focused software engineer. Penn State CS '25 (3.87,
+          math minor); AWS DevOps Pro, CKAD, Terraform Associate. Based in
+          Baltimore, open to relocation.
         </p>
         <nav className="mt-5 flex flex-wrap items-center gap-x-3 gap-y-1 text-base">
           <a

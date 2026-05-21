@@ -64,6 +64,12 @@ export default function Home() {
           >
             youtube.com/@knavishmantis <span aria-hidden="true">→</span>
           </a>
+          <a
+            href="https://linkedin.com/in/quinn-caverly"
+            className="text-fg hover:text-accent"
+          >
+            linkedin.com/in/quinn-caverly <span aria-hidden="true">→</span>
+          </a>
         </nav>
       </header>
 

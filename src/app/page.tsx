@@ -1,5 +1,3 @@
-const BASE_PATH = "/quinn-caverly";
-
 type Project = {
   title: string;
   blurb: string;
@@ -90,7 +88,7 @@ function ProjectBanner({ project }: { project: Project }) {
         {project.image ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
-            src={`${BASE_PATH}${project.image}`}
+            src={project.image}
             alt=""
             className="absolute inset-0 h-full w-full object-cover"
           />
